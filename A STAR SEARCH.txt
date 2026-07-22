@@ -1,0 +1,34 @@
+START
+
+Input Graph, Start Node, Goal Node and Heuristic Values
+
+Create a Priority Queue
+
+Insert Start Node with
+f(n) = g(n) + h(n)
+
+WHILE Priority Queue is not empty DO
+
+    Remove node with smallest f(n)
+
+    IF node is Goal THEN
+        Print Optimal Cost
+        STOP
+    END IF
+
+    IF node is not visited THEN
+        Mark node as visited
+
+        FOR each adjacent node DO
+
+            g(n) = Current Cost + Edge Cost
+            f(n) = g(n) + Heuristic
+
+            Insert adjacent node with f(n)
+
+        END FOR
+    END IF
+
+END WHILE
+
+STOP
