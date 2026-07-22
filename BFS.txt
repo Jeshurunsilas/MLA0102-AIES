@@ -1,0 +1,27 @@
+START
+
+Input Graph and Start Node
+
+Create an empty Queue
+Create an empty Visited Set
+
+Enqueue(Start Node)
+
+WHILE Queue is not empty DO
+
+    Remove first node from Queue
+
+    IF node is not visited THEN
+        Print node
+        Mark node as visited
+
+        FOR each adjacent node DO
+            IF adjacent node is not visited THEN
+                Enqueue(adjacent node)
+            END IF
+        END FOR
+    END IF
+
+END WHILE
+
+STOP
