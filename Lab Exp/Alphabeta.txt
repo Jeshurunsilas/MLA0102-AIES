@@ -1,0 +1,39 @@
+START
+
+FUNCTION AlphaBeta(depth, nodeIndex, alpha, beta, isMax)
+
+    IF depth == maximum depth THEN
+        RETURN leaf value
+    END IF
+
+    IF isMax is TRUE THEN
+
+        FOR each child
+            alpha = MAX(alpha, AlphaBeta(child))
+
+            IF beta <= alpha THEN
+                BREAK
+            END IF
+        END FOR
+
+        RETURN alpha
+
+    ELSE
+
+        FOR each child
+            beta = MIN(beta, AlphaBeta(child))
+
+            IF beta <= alpha THEN
+                BREAK
+            END IF
+        END FOR
+
+        RETURN beta
+
+END FUNCTION
+
+Call AlphaBeta
+
+Print optimal value
+
+STOP

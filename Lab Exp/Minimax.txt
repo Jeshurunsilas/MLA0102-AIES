@@ -1,0 +1,25 @@
+START
+
+FUNCTION Minimax(depth, nodeIndex, isMax)
+
+    IF depth == maximum depth THEN
+        RETURN leaf node value
+    END IF
+
+    IF isMax is TRUE THEN
+        RETURN maximum of
+            Minimax(left child)
+            Minimax(right child)
+
+    ELSE
+        RETURN minimum of
+            Minimax(left child)
+            Minimax(right child)
+
+END FUNCTION
+
+Call Minimax with root node
+
+Print the optimal value
+
+STOP

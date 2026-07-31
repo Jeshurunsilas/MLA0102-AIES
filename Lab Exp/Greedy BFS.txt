@@ -1,0 +1,28 @@
+START
+
+Input Graph, Start Node, Goal Node and Heuristic Values
+
+Create a Priority Queue
+
+Insert Start Node
+
+WHILE Priority Queue is not empty DO
+
+    Remove node with smallest heuristic value
+
+    IF node is Goal THEN
+        Print Goal Found
+        STOP
+    END IF
+
+    IF node is not visited THEN
+        Mark node as visited
+
+        FOR each adjacent node DO
+            Insert adjacent node using heuristic value
+        END FOR
+    END IF
+
+END WHILE
+
+STOP
