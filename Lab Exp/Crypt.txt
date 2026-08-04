@@ -1,0 +1,25 @@
+BEGIN
+
+LET letters = {S, E, N, D, M, O, R, Y}
+
+FOR each permutation of digits 0–9 assigned to letters DO
+
+    IF S = 0 OR M = 0 THEN
+        CONTINUE
+    END IF
+
+    SEND  ← 1000×S + 100×E + 10×N + D
+    MORE  ← 1000×M + 100×O + 10×R + E
+    MONEY ← 10000×M + 1000×O + 100×N + 10×E + Y
+
+    IF SEND + MORE = MONEY THEN
+        PRINT SEND
+        PRINT MORE
+        PRINT MONEY
+        PRINT letter-to-digit mapping
+        STOP
+    END IF
+
+END FOR
+
+PRINT "No Solution Found"
