@@ -1,0 +1,17 @@
+START
+
+Import required libraries
+
+Load the dataset
+
+Split the dataset into training and testing data
+
+Create the Decision Tree model
+
+Train the model
+
+Predict the test data
+
+Display the predictions
+
+STOP
