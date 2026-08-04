@@ -1,0 +1,20 @@
+START
+
+FUNCTION Hanoi(n, Source, Auxiliary, Destination)
+
+    IF n == 1 THEN
+        Move disk from Source to Destination
+        RETURN
+    END IF
+
+    Hanoi(n-1, Source, Destination, Auxiliary)
+
+    Move disk n from Source to Destination
+
+    Hanoi(n-1, Auxiliary, Source, Destination)
+
+END FUNCTION
+
+Call Hanoi(n, A, B, C)
+
+STOP
