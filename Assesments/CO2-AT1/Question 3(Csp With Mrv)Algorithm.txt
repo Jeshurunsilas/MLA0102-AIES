@@ -1,0 +1,27 @@
+1. Start.
+2. Define all variables.
+3. Define the domain of each variable.
+4. Define constraints between variables.
+5. If all variables are assigned:
+      Return the solution.
+6. Select an unassigned variable using MRV.
+      Choose the variable with the smallest
+      remaining domain.
+7. For each value in the selected variable's domain:
+      a. Check whether assigning this value
+         violates any constraint.
+      b. If the assignment is consistent:
+            i. Assign the value.
+            ii. Perform Forward Checking.
+            iii. Remove this value from the domains
+                 of neighboring unassigned variables.
+            iv. If any neighboring domain becomes empty:
+                    Undo the assignment.
+                    Continue with the next value.
+            v. Otherwise, recursively solve the
+               remaining CSP.
+8. If a complete solution is found:
+      Return the solution.
+9. If no value works:
+      Backtrack.
+10. Stop.
