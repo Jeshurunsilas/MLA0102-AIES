@@ -1,0 +1,27 @@
+1. Start
+2. Create a priority queue OPEN.
+3. Insert the start node into OPEN.
+4. Set:
+      g(start) = 0
+      f(start) = g(start) + h(start)
+5. Create an empty set CLOSED.
+6. Repeat while OPEN is not empty:
+      a. Select the node n having the smallest f(n).
+      b. Remove n from OPEN.
+      c. If n is the goal:
+            i. Reconstruct the path.
+            ii. Return the optimal path.
+      d. Add n to CLOSED.
+      e. For each successor s of n:
+            i. Calculate:
+                  tentative_g = g(n) + cost(n,s)
+            ii. If tentative_g is better than
+                the previous g(s):
+                  - Set g(s) = tentative_g.
+                  - Calculate:
+                        f(s) = g(s) + h(s)
+                  - Set n as parent of s.
+                  - Add s to OPEN.
+7. If OPEN becomes empty:
+      Return "No path found".
+8. Stop.
