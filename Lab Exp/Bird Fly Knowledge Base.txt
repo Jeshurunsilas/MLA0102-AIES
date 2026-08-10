@@ -1,0 +1,15 @@
+% Facts
+bird(sparrow).
+bird(parrot).
+bird(eagle).
+bird(penguin).
+bird(ostrich).
+
+% Flying birds
+can_fly(sparrow).
+can_fly(parrot).
+can_fly(eagle).
+
+% Non-flying birds
+can_fly(penguin) :- fail.
+can_fly(ostrich) :- fail.
