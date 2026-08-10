@@ -1,0 +1,31 @@
+1. Start.
+2. Initialize the robot's map of the environment.
+3. Set current_position = start.
+4. Repeat until the goal is reached:
+
+      a. Observe the current environment.
+
+      b. Check for newly detected obstacles.
+
+      c. If a new obstacle is detected:
+            i. Update the environment map.
+            ii. Remove blocked cells from the search space.
+
+      d. Calculate a path from the current position
+         to the goal using A*.
+
+      e. If no path exists:
+            Return "Goal currently unreachable".
+
+      f. Select the next position on the calculated path.
+
+      g. Move the robot one step.
+
+      h. Update current_position.
+
+      i. Check the environment again.
+
+5. When current_position == goal:
+      Return "Goal reached".
+
+6. Stop.
