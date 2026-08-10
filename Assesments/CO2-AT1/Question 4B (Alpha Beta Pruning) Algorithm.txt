@@ -1,0 +1,28 @@
+1. Start.
+2. Set:
+      alpha = -∞
+      beta = +∞
+3. Begin at the root.
+4. If the node is terminal:
+      Return its utility value.
+5. If the node is a MAX node:
+      a. Set value = -∞.
+      b. For each child:
+            i. Evaluate child using Alpha-Beta.
+            ii. value = max(value, child_value).
+            iii. alpha = max(alpha, value).
+            iv. If alpha >= beta:
+                    Prune remaining children.
+                    Break.
+      c. Return value.
+6. If the node is a MIN node:
+      a. Set value = +∞.
+      b. For each child:
+            i. Evaluate child using Alpha-Beta.
+            ii. value = min(value, child_value).
+            iii. beta = min(beta, value).
+            iv. If beta <= alpha:
+                    Prune remaining children.
+                    Break.
+      c. Return value.
+7. Stop.
