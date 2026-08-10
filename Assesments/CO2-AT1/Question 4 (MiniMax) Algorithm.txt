@@ -1,0 +1,21 @@
+1. Start.
+2. Begin at the root node.
+3. If the current node is a terminal node:
+      Return its utility value.
+4. If the current player is MAX:
+      a. Set best_value = -∞.
+      b. For each child:
+            - Evaluate the child using Minimax.
+            - best_value =
+              maximum(best_value, child_value)
+      c. Return best_value.
+5. If the current player is MIN:
+      a. Set best_value = +∞.
+      b. For each child:
+            - Evaluate the child using Minimax.
+            - best_value =
+              minimum(best_value, child_value)
+      c. Return best_value.
+6. At the root, choose the child having
+   the highest Minimax value.
+7. Stop.
