@@ -1,0 +1,7 @@
+Represent different animals as members of the bird category.
+Store common bird characteristics such as feathers, wings and laying eggs.
+Store special characteristics for individual birds.
+Use the inheritance rule to obtain properties from the parent category.
+Check whether the animal is a bird and has wings.
+If it does not have the cannot_fly property, conclude that it can fly.
+Return true or false.
