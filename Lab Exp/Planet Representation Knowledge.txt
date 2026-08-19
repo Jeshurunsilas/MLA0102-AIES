@@ -1,0 +1,39 @@
+% Planet Knowledge Representation
+% Retrieve planetary facts using logical inference
+
+% Planet facts
+planet(mercury, terrestrial, 57900000, 88).
+planet(venus, terrestrial, 108200000, 225).
+planet(earth, terrestrial, 149600000, 365).
+planet(mars, terrestrial, 227900000, 687).
+
+planet(jupiter, gas_giant, 778500000, 4333).
+planet(saturn, gas_giant, 1434000000, 10759).
+planet(uranus, ice_giant, 2871000000, 30687).
+planet(neptune, ice_giant, 4495000000, 60190).
+
+% Logical inference rules
+
+% Find the type of a planet
+planet_type(Planet, Type) :-
+    planet(Planet, Type, _, _).
+
+% Find the distance from the Sun
+distance_from_sun(Planet, Distance) :-
+    planet(Planet, _, Distance, _).
+
+% Find the orbital period
+orbital_period(Planet, Days) :-
+    planet(Planet, _, _, Days).
+
+% Find all terrestrial planets
+terrestrial_planets(Planets) :-
+    findall(Planet, planet(Planet, terrestrial, _, _), Planets).
+
+% Find all gas giant planets
+gas_giants(Planets) :-
+    findall(Planet, planet(Planet, gas_giant, _, _), Planets).
+
+% Find all ice giant planets
+ice_giants(Planets) :-
+    findall(Planet, planet(Planet, ice_giant, _, _), Planets).
