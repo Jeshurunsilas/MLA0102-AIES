@@ -1,0 +1,28 @@
+% Fruit Color Classification using Production Rules
+
+% Production rules
+fruit(apple, red).
+fruit(apple, green).
+
+fruit(banana, yellow).
+
+fruit(orange, orange).
+
+fruit(grapes, green).
+fruit(grapes, purple).
+
+fruit(watermelon, green).
+
+fruit(strawberry, red).
+
+% Classification rule
+classify_fruit(Fruit, Color) :-
+    fruit(Fruit, Color).
+
+% Display result
+identify(Fruit) :-
+    fruit(Fruit, Color),
+    write(Fruit),
+    write(' is classified as '),
+    write(Color),
+    write(' in color.'), nl.
