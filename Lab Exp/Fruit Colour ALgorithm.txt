@@ -1,0 +1,12 @@
+Algorithm: Fruit Color Classification using Production Rules
+Start
+Define the fruit facts with their corresponding colors.
+Store the production rules in the form fruit(Fruit, Color).
+Define the classify_fruit/2 rule to obtain the color of a given fruit.
+Define the identify/1 rule to display the fruit name and its color.
+Take a fruit name as input.
+Search the database for a matching fruit(Fruit, Color) fact.
+If a matching fact is found, display: Fruit is classified as Color in color.
+If multiple colors are available, Prolog returns each matching result on backtracking.
+If no matching fruit is found, return false.
+Stop.
