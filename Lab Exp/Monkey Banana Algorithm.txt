@@ -1,0 +1,8 @@
+Algorithm: Monkey and Banana Problem (Optimal Action Plan)
+Start.
+Check the positions of the monkey, box, and banana.
+If the monkey is not at the box, move the monkey to the box.
+Push the box to the position directly below the banana.
+Climb onto the box.
+Reach up and grab the banana.
+Stop.
