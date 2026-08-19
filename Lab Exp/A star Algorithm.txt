@@ -1,0 +1,21 @@
+Start
+
+Read start node and goal node
+
+Add start node to OPEN list
+
+While OPEN list is not empty
+    Select node with lowest f = g + h
+
+    If node is goal
+        Print optimal path and cost
+        Stop
+
+    Mark node as visited
+
+    For each neighbor
+        Calculate new g = current cost + edge cost
+        Calculate f = g + heuristic
+        Add neighbor to OPEN list
+
+Stop
