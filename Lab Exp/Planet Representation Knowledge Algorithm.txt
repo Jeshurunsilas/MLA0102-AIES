@@ -1,0 +1,11 @@
+Algorithm
+Start
+Define the planets and store their name, type, distance from the Sun, and orbital period as facts.
+Define a rule planet_type/2 to retrieve the type of a given planet.
+Define a rule distance_from_sun/2 to retrieve the planet's distance from the Sun.
+Define a rule orbital_period/2 to retrieve the orbital period of a planet.
+Use logical inference to match the query with the stored facts.
+Use findall/3 to collect all planets belonging to a particular category.
+Display the retrieved planetary information.
+If no matching fact exists, Prolog returns false.
+Stop.
